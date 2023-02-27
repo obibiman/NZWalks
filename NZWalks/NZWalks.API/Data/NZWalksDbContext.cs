@@ -5,13 +5,13 @@ namespace NZWalks.API.Data
 {
     public class NZWalksDbContext: DbContext
     {
-        public NZWalksDbContext(DbContextOptions<NZWalksDbContext> options): base(options)
+        public NZWalksDbContext(DbContextOptions<NZWalksDbContext> options) : base(options)
         {
             
         }
 
-        DbSet<Region> Regions { get; set; }
-        DbSet<Walk> Walks { get; set; }
-        DbSet<WalkDifficulty> WalkDifficulty { get; set; }
+        public DbSet<Region>? Regions { get; set; }
+        public DbSet<Walk>? Walks { get; set; }
+        public DbSet<WalkDifficulty>? WalkDifficulty { get; set; }
     }
 }
